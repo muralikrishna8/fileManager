@@ -150,7 +150,7 @@ module.exports = function (grunt) {
       options: {
         inject: 'js/tests/unit/phantom.js'
       },
-      files: 'js/tests/index.html'
+      list: 'js/tests/index.html'
     },
 
     less: {
@@ -357,15 +357,15 @@ module.exports = function (grunt) {
 
     watch: {
       src: {
-        files: '<%= jshint.core.src %>',
+        list: '<%= jshint.core.src %>',
         tasks: ['jshint:core', 'qunit', 'concat']
       },
       test: {
-        files: '<%= jshint.test.src %>',
+        list: '<%= jshint.test.src %>',
         tasks: ['jshint:test', 'qunit']
       },
       less: {
-        files: 'less/**/*.less',
+        list: 'less/**/*.less',
         tasks: 'less'
       }
     },
@@ -416,7 +416,7 @@ module.exports = function (grunt) {
           level: 9,
           pretty: true
         },
-        files: [
+        list: [
           {
             expand: true,
             cwd: 'dist/',

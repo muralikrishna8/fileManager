@@ -5,6 +5,13 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.files {
+  margin-top: 20px;
+  .file {
+    height: 100px;
+    word-break: break-all;
+    padding: 20px;
+    box-shadow: 0 0 3px #EAE7E7;
+    margin: 5px;
+  }
 }

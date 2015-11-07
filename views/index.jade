@@ -1,5 +1,8 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    div(ng-controller="fileController as files")
+        .container-fluid
+            .row.files
+                .col-md-2.col-lg-1.col-sm-3.file(ng-repeat="file in files.list")
+                    | {{file}}
