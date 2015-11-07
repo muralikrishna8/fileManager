@@ -2,6 +2,13 @@ extends layout
 
 block content
     div(ng-controller="fileController as files")
+        .input-group
+            span.input-group-addon #{path}/
+            input.form-control(ng-model="files.path")
+            span.input-group-btn
+                button.btn.btn-info(ng-click="files.openPath()")
+                    i.glyphicon-folder-open.glyphicon
+                    |&nbsp; Open
         .container-fluid
             .row.files
                 .col-md-2.col-lg-1.col-sm-3.file(ng-repeat="file in files.list")
