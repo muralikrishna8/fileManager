@@ -6,7 +6,7 @@ block content
             .col-md-8
                 .input-group
                     span.input-group-addon #{basePath}/
-                    input.form-control(ng-model="files.inputPath")
+                    input.form-control(ng-model="files.inputPath" ng-enter="files.openPath()")
                     span.input-group-btn
                         button.btn.btn-info(ng-click="files.openPath()")
                             i.glyphicon-folder-open.glyphicon
