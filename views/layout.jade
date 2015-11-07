@@ -1,0 +1,12 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body(ng-app="fileManager")
+        block content
+        script(src='/lib/jquery/dist/jquery.min.js')
+        script(src='/lib/bootstrap/dist/js/bootstrap.min.js')
+        script(src='/lib/angular/angular.min.js')
+        script(src='/javascripts/fileManager.js')
