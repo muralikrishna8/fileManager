@@ -16,6 +16,9 @@ block content
                     span.input-group-addon
                         i.glyphicon.glyphicon-search
                     input.form-control(ng-model="files.search")
+        ol.breadcrumb
+            li #{basePath}
+            li(ng-repeat="directory in files.inputPath.split('/') track by $index") {{directory}}
         .container-fluid
             .row.files
                 .col-md-2.col-lg-1.col-sm-3.file(ng-repeat="file in files.list | filter: files.search")

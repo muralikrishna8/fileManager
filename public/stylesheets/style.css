@@ -14,3 +14,7 @@ body {
   margin: 5px;
   overflow: hidden;
 }
+
+.breadcrumb {
+  margin-top: 10px;
+}
