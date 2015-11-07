@@ -2,14 +2,21 @@ extends layout
 
 block content
     div(ng-controller="fileController as files")
-        .input-group
-            span.input-group-addon #{path}/
-            input.form-control(ng-model="files.path")
-            span.input-group-btn
-                button.btn.btn-info(ng-click="files.openPath()")
-                    i.glyphicon-folder-open.glyphicon
-                    |&nbsp; Open
+        .row
+            .col-md-8
+                .input-group
+                    span.input-group-addon #{basePath}/
+                    input.form-control(ng-model="files.inputPath")
+                    span.input-group-btn
+                        button.btn.btn-info(ng-click="files.openPath()")
+                            i.glyphicon-folder-open.glyphicon
+                            |&nbsp; Open
+            .col-md-4
+                .input-group
+                    span.input-group-addon
+                        i.glyphicon.glyphicon-search
+                    input.form-control(ng-model="files.search")
         .container-fluid
             .row.files
-                .col-md-2.col-lg-1.col-sm-3.file(ng-repeat="file in files.list")
+                .col-md-2.col-lg-1.col-sm-3.file(ng-repeat="file in files.list | filter: files.search")
                     | {{file}}
