@@ -9,6 +9,9 @@ angular.module("fileManager").controller("fileController" , ["$http", function($
             }, function(response){
                 console.log(response);
             });
+        if (! /\/$/.test(vm.inputPath) && vm.inputPath.length > 0) {
+            vm.inputPath += "/";
+        }
     };
     vm.openPath();
 }]);
