@@ -8,12 +8,40 @@ body {
 .files {
   margin-top: 20px;
   .file {
-    height: 100px;
+    height: 150px;
     word-break: break-all;
     padding: 10px;
     box-shadow: 0 0 3px #EAE7E7;
-    margin: 5px;
+    margin: 10px 5px;
     overflow: hidden;
+    -webkit-transition: box-shadow 0.5s cubic-bezier(0.39, 0.58, 0.57, 1);
+    -moz-transition: box-shadow 0.5s cubic-bezier(0.39, 0.58, 0.57, 1);
+    -ms-transition: box-shadow 0.5s cubic-bezier(0.39, 0.58, 0.57, 1);
+    -o-transition: box-shadow 0.5s cubic-bezier(0.39, 0.58, 0.57, 1);
+    transition: box-shadow 0.5s cubic-bezier(0.39, 0.58, 0.57, 1);
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 20px #D8D6D6;
+      .folder-icon {
+        text-shadow: -2px 2px 1px rgba(23, 22, 22, 0.22);
+      }
+    }
+  }
+  .folder-icon {
+    display: block;
+    font-size: 50px;
+    margin-bottom: 10px;
+    -webkit-transition: text-shadow 0.5s ease;
+    -moz-transition: text-shadow 0.5s ease;
+    -ms-transition: text-shadow 0.5s ease;
+    -o-transition: text-shadow 0.5s ease;
+    transition: text-shadow 0.5s ease;
+    &.directory {
+      color: #5BC0DE;
+    }
+    &.not-directory {
+      color: gray;
+    }
   }
 }
 

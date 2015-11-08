@@ -9,6 +9,11 @@ router.get('/', function(req, res, next) {
             console.log(err);
             res.sendStatus(403);
         }
+        files = files.map(function(file){
+            var stats =  fs.statSync(path.join(filePath, file));
+            return {"name" : file, "isDir" : stats.isDirectory()};
+        });
+
         res.json(files);
     })
 });
