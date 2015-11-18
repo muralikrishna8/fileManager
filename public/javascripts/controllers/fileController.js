@@ -1,9 +1,9 @@
-angular.module("fileManager").controller("fileController", ["$http", "RESOURCES", function ($http, RESOURCES) {
+angular.module("fileManager").controller("fileController", ["$http", "filesFactory" , function ($http, filesFactory) {
     var vm = this;
     vm.list = [];
     vm.inputPath = "";
     vm.openPath = function () {
-        $http.get(RESOURCES.BASE_API+RESOURCES.FILES+"?path=" + vm.inputPath)
+            filesFactory.getFiles(vm.inputPath)
             .then(function (response) {
                 vm.list = response.data;
             }, function (response) {
