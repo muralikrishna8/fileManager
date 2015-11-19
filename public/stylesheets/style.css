@@ -7,7 +7,6 @@ body {
   margin-top: 20px;
 }
 .files .file {
-  height: 150px;
   word-break: break-all;
   padding: 10px;
   box-shadow: 0 0 3px #EAE7E7;
@@ -26,7 +25,7 @@ body {
 .files .file:hover .folder-icon {
   text-shadow: -2px 2px 1px rgba(23, 22, 22, 0.22);
 }
-.files .folder-icon {
+.files .file-icon {
   display: block;
   font-size: 50px;
   margin-bottom: 10px;
@@ -36,11 +35,17 @@ body {
   -o-transition: text-shadow 0.5s ease;
   transition: text-shadow 0.5s ease;
 }
-.files .folder-icon.directory {
+.files .file-icon.directory {
   color: #5BC0DE;
 }
-.files .folder-icon.not-directory {
+.files .file-icon.not-directory {
   color: gray;
+}
+.files .file-name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
 }
 
 .breadcrumb {

@@ -3,7 +3,7 @@ angular.module("fileManager").controller("fileController", ["$http", "filesFacto
     vm.list = [];
     vm.inputPath = "";
     vm.openPath = function () {
-            filesFactory.getFiles(vm.inputPath)
+        filesFactory.getFiles(vm.inputPath)
             .then(function (response) {
                 vm.list = response.data;
             }, function (response) {

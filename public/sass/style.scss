@@ -8,7 +8,6 @@ body {
 .files {
   margin-top: 20px;
   .file {
-    height: 150px;
     word-break: break-all;
     padding: 10px;
     box-shadow: 0 0 3px #EAE7E7;
@@ -27,7 +26,7 @@ body {
       }
     }
   }
-  .folder-icon {
+  .file-icon {
     display: block;
     font-size: 50px;
     margin-bottom: 10px;
@@ -42,6 +41,12 @@ body {
     &.not-directory {
       color: gray;
     }
+  }
+  .file-name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden
   }
 }
 
