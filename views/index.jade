@@ -21,6 +21,6 @@ block content
             li(ng-repeat="directory in files.inputPath.split('/') track by $index") {{directory}}
         .container-fluid
             .row.files
-                .col-md-2.col-lg-1.col-sm-3.file.text-center(ng-repeat="file in files.list | filter: files.search")
+                .col-md-2.col-lg-1.col-sm-3.file.text-center(ng-repeat="file in files.list | filter: files.search" data-toggle = "tooltip" data-placement = "bottom" title = "{{file.name}}" tooltip)
                     i.glyphicon.file-icon(class = '{{file.isDir ? "glyphicon-folder-close directory" : "glyphicon-file not-directory";}}')
-                    span.file-name(title = "{{file.name}}") {{file.name}}
+                    span.file-name {{file.name}}
